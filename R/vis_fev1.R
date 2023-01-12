@@ -4,6 +4,14 @@ lapply(packages, library, character.only = TRUE, quietly = T)
 rm(packages)
 
 
+#  Chart showing relationship between FEV1 and age
+
+data(fev1)
+fev1_temp_plot <- ggplot(data = fev1,
+                          aes(x = age, y = FEV1)) + geom_point()
+
+
+
 # read the data in
 fev1 <- read_csv("data/fev1.csv", col_types = list('id' = 'f'))
 
