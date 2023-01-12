@@ -13,7 +13,7 @@ library(mosaicData)
 data(Gestation)
 
 # Activity 1 - Quick look at the data
-
+#ccomment
 # number of observations
 count(Gestation)
 
