@@ -1,12 +1,8 @@
-#       _/_/    _/  _/      _/_/      _/   
-#    _/    _/  _/  _/    _/    _/  _/_/    
-#       _/    _/_/_/_/    _/_/_/    _/     
-#    _/          _/          _/    _/      
-# _/_/_/_/      _/    _/_/_/    _/_/_/     
+packages <- c("dplyr",  "tidyr", "tidyverse", "mosaicData")
+install.packages(setdiff(packages, rownames(installed.packages())))
+lapply(packages, library, character.only = TRUE, quietly = T)
+rm(packages)
 
-# Exploratory Data Analysis of FEV1 data
-
-library(tidyverse)
 
 #  Chart showing relationship between FEV1 and age
 
