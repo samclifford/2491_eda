@@ -5,7 +5,7 @@ rm(packages)
 
 
 # read the data in
-fev1 <- read_csv("../data/fev1.csv", col_types = list('id' = 'f'))
+fev1 <- read_csv("data/fev1.csv", col_types = list('id' = 'f'))
 
 # sample the data so that we have 20 patients with more than 6 observations
 
@@ -22,7 +22,12 @@ fev1_sampled
 
 # Calculate the correlation between age and FEV1
 # (yes, this isn't strictly correct because there's repeated measures)
-
+ggplot(fev1_sampled,
+       aes(x = age,
+           y = FEV1)) +
+  geom_point(size = 3,
+             alpha = .6) +
+  labs(title = "correlation between age and FEV1")
 
 # Build a plot that shows the relationship between FEV1 and age
 
