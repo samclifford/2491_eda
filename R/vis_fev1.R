@@ -8,16 +8,11 @@
 
 library(tidyverse)
 
+#  Chart showing relationship between FEV1 and age
+
 data(fev1)
 fev1_temp_plot <- ggplot(data = fev1,
                           aes(x = age, y = FEV1)) + geom_point()
-
-
-fev1_temp_plot
-
-
-
-
 
 
 
