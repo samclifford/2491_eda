@@ -1,12 +1,8 @@
-#       _/_/    _/  _/      _/_/      _/   
-#    _/    _/  _/  _/    _/    _/  _/_/    
-#       _/    _/_/_/_/    _/_/_/    _/     
-#    _/          _/          _/    _/      
-# _/_/_/_/      _/    _/_/_/    _/_/_/     
+packages <- c("dplyr",  "tidyr", "tidyverse", "mosaicData")
+install.packages(setdiff(packages, rownames(installed.packages())))
+lapply(packages, library, character.only = TRUE, quietly = T)
+rm(packages)
 
-# Exploratory Data Analysis of FEV1 data
-
-library(tidyverse)
 
 # read the data in
 fev1 <- read_csv("../data/fev1.csv", col_types = list('id' = 'f'))
