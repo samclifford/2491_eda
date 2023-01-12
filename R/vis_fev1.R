@@ -30,18 +30,15 @@ fev1_sampled
 
 # Calculate the correlation between age and FEV1
 # (yes, this isn't strictly correct because there's repeated measures)
-ggplot(fev1_sampled,
+
+
+# Build a plot that shows the relationship between FEV1 and age
+fev1_plot <- ggplot(fev1_sampled,
        aes(x = age,
            y = FEV1)) +
   geom_point(size = 3,
              alpha = .6) +
-  labs(title = "correlation between age and FEV1")
-
-# Build a plot that shows the relationship between FEV1 and age
-
-fev1_plot <- ggplot(data = fev1_sampled, 
-                    aes(x = ..., y = ...)) +
-    geom_point()
+  labs(title = "Relationship between FEV1 and age")
 
 fev1_plot
 
